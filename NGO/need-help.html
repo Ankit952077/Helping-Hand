@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need Help | Helping Hands</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         NAVBAR
+    =========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                ❤️ Helping Hands
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="donate.html">Donate</a></li>
+
+                <li><a href="volunteer.html">Volunteer</a></li>
+
+                <li><a href="gallery.html">Gallery</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ==========================
+         PAGE TITLE
+    =========================== -->
+
+    <section class="page-title">
+
+        <h1>Need Help</h1>
+
+        <p>
+            Fill the form below. Our volunteers and donors
+            will review your request.
+        </p>
+
+    </section>
+
+    <!-- ==========================
+         FORM
+    =========================== -->
+
+    <section class="help-form-section">
+
+        <form id="helpForm">
+
+            <!-- Personal Information -->
+
+            <h2>Personal Information</h2>
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>Full Name *</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label>Mobile Number *</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="email">
+
+                </div>
+
+                <div>
+
+                    <label>Age</label>
+
+                    <input
+                        type="number"
+                        id="age">
+
+                </div>
+
+            </div>
+
+            <!-- Address -->
+
+            <h2>Location</h2>
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>State</label>
+
+                    <input
+                        type="text"
+                        id="state">
+
+                </div>
+
+                <div>
+
+                    <label>City</label>
+
+                    <input
+                        type="text"
+                        id="city">
+
+                </div>
+
+                <div>
+
+                    <label>Pincode</label>
+
+                    <input
+                        type="number"
+                        id="pin">
+
+                </div>
+
+                <div>
+
+                    <label>Google Map Link</label>
+
+                    <input
+                        type="url"
+                        id="map">
+
+                </div>
+
+            </div>
+
+            <label>Complete Address</label>
+
+            <textarea
+                id="address"
+                rows="4"></textarea>
+
+            <!-- Need Details -->
+
+            <h2>Need Details</h2>
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>Category</label>
+
+                    <select id="category">
+
+                        <option>Food</option>
+
+                        <option>Medical</option>
+
+                        <option>Clothes</option>
+
+                        <option>Education</option>
+
+                        <option>Blood</option>
+
+                        <option>Shelter</option>
+
+                        <option>Emergency</option>
+
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+                <div>
+
+                    <label>Urgency</label>
+
+                    <select id="urgency">
+
+                        <option>Low</option>
+
+                        <option>Medium</option>
+
+                        <option>High</option>
+
+                        <option>Emergency</option>
+
+                    </select>
+
+                </div>
+
+                <div>
+
+                    <label>Amount Required</label>
+
+                    <input
+                        type="number"
+                        id="amount">
+
+                </div>
+
+                <div>
+
+                    <label>Family Members</label>
+
+                    <input
+                        type="number"
+                        id="family">
+
+                </div>
+
+            </div>
+
+            <label>Describe Your Need *</label>
+
+            <textarea
+                id="description"
+                rows="7"
+                placeholder="Explain your situation..."
+                required></textarea>
+
+            <!-- Upload -->
+
+            <h2>Upload Evidence</h2>
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>Upload Images (Optional)</label>
+
+                    <input
+                        type="file"
+                        id="images"
+                        multiple
+                        accept="image/*">
+
+                </div>
+
+                <div>
+
+                    <label>Upload Video (Optional)</label>
+
+                    <input
+                        type="file"
+                        id="video"
+                        accept="video/*">
+
+                </div>
+
+                <div>
+
+                    <label>ID Proof (Optional)</label>
+
+                    <input
+                        type="file"
+                        id="idProof"
+                        accept=".pdf,.jpg,.png">
+
+                </div>
+
+                <div>
+
+                    <label>Supporting Document (Optional)</label>
+
+                    <input
+                        type="file"
+                        id="supportingDoc">
+
+                </div>
+
+            </div>
+
+            <!-- Declaration -->
+
+            <div class="checkbox">
+
+                <input
+                    type="checkbox"
+                    required>
+
+                <span>
+
+                    I confirm that all information
+                    provided by me is true.
+
+                </span>
+
+            </div>
+
+            <button
+                type="submit"
+                class="primary">
+
+                Submit Request
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/forms.js"></script>
+
+</body>
+
+</html>

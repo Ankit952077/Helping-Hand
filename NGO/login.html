@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Helping Hands | Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#0F766E,#2563EB);
+
+}
+
+.container{
+
+width:400px;
+
+background:#fff;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+}
+
+h1{
+
+text-align:center;
+
+margin-bottom:10px;
+
+color:#0F766E;
+
+}
+
+p{
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#666;
+
+}
+
+.input-box{
+
+margin-bottom:20px;
+
+}
+
+.input-box label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+}
+
+.input-box input{
+
+width:100%;
+
+padding:15px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+.password{
+
+position:relative;
+
+}
+
+.password span{
+
+position:absolute;
+
+right:15px;
+
+top:45px;
+
+cursor:pointer;
+
+}
+
+.options{
+
+display:flex;
+
+justify-content:space-between;
+
+font-size:14px;
+
+margin-bottom:20px;
+
+}
+
+.options a{
+
+text-decoration:none;
+
+color:#2563EB;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+background:#0F766E;
+
+color:#fff;
+
+font-size:17px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#2563EB;
+
+}
+
+.google{
+
+margin-top:15px;
+
+background:#fff;
+
+border:2px solid #ddd;
+
+color:#333;
+
+}
+
+.google:hover{
+
+background:#f5f5f5;
+
+}
+
+.register{
+
+text-align:center;
+
+margin-top:25px;
+
+}
+
+.register a{
+
+text-decoration:none;
+
+color:#2563EB;
+
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Helping Hands ❤️</h1>
+
+<p>Welcome Back</p>
+
+<form id="loginForm">
+
+<div class="input-box">
+    <label>Email</label>
+    <input type="email" id="loginEmail" placeholder="Enter Email" required>
+</div>
+
+<div class="input-box password">
+    <label>Password</label>
+    <input type="password" id="loginPassword" placeholder="Enter Password" required>
+    <span id="toggle" onclick="showPassword()">👁️</span>
+</div>
+
+<div class="options">
+    <label><input type="checkbox"> Remember Me</label>
+     <a href="#" onclick="alert('Coming Soon'); return false;">Forgot Password?</a>
+    
+</div>
+
+
+<div class="register">
+    Don't have an account?
+    <a href="register.html">Register</a>
+</div>
+
+
+<button>
+
+Login
+
+</button>
+
+<button
+type="button"
+class="google">
+
+Continue with Google
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/auth.js"></script>
+
+
+</body>
+
+</html>

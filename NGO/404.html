@@ -1,0 +1,225 @@
+<!-- 404.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 | Page Not Found</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#0F766E,#2563EB);
+
+overflow:hidden;
+
+}
+
+.container{
+
+background:#fff;
+
+padding:60px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+max-width:650px;
+
+}
+
+.container h1{
+
+font-size:140px;
+
+color:#0F766E;
+
+line-height:1;
+
+}
+
+.container h2{
+
+font-size:35px;
+
+margin:20px 0;
+
+}
+
+.container p{
+
+color:#666;
+
+margin-bottom:35px;
+
+line-height:1.8;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#0F766E;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:12px;
+
+transition:.3s;
+
+font-weight:600;
+
+}
+
+.btn:hover{
+
+background:#2563EB;
+
+transform:translateY(-3px);
+
+}
+
+.circle{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.1);
+
+animation:float 8s infinite linear;
+
+}
+
+.c1{
+
+width:200px;
+
+height:200px;
+
+top:-60px;
+
+left:-60px;
+
+}
+
+.c2{
+
+width:150px;
+
+height:150px;
+
+bottom:-50px;
+
+right:-50px;
+
+}
+
+.c3{
+
+width:120px;
+
+height:120px;
+
+top:20%;
+
+right:10%;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(20px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle c1"></div>
+
+<div class="circle c2"></div>
+
+<div class="circle c3"></div>
+
+<div class="container">
+
+<h1>
+
+404
+
+</h1>
+
+<h2>
+
+Oops! Page Not Found
+
+</h2>
+
+<p>
+
+The page you are looking for doesn't exist or has been moved.
+Please return to the homepage and continue helping people.
+
+</p>
+
+<a href="index.html" class="btn">
+
+🏠 Back To Home
+
+</a>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!-- admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Helping Hands</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+❤️ Admin Panel
+
+</div>
+
+<div class="user-box">
+
+<img src="https://i.pravatar.cc/150?img=65">
+
+<h3>Administrator</h3>
+
+<p>Helping Hands NGO</p>
+
+</div>
+<ul class="menu">
+    <li><a href="admin-dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+    <li><a href="manage-users.html"><i class="fa-solid fa-users"></i> Manage Users</a></li>
+    <li><a href="manage-posts.html"><i class="fa-solid fa-hand-holding-heart"></i> Help Requests</a></li>
+    <li><a href="manage-donations.html"><i class="fa-solid fa-donate"></i> Donations</a></li>
+    <li><a href="manage-volunteers.html"><i class="fa-solid fa-people-group"></i> Volunteers</a></li>
+    <li><a href="gallery.html"><i class="fa-solid fa-image"></i> Gallery</a></li>
+    <li><a href="notifications.html"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+    <li><a href="#" onclick="adminLogout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+</ul>
+
+</div>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Main -->
+
+<div class="main">
+
+<header class="header">
+
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+
+<input
+id="search"
+class="search"
+placeholder="Search users, requests...">
+
+<div class="header-right">
+
+<div class="notification">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>8</span>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="content">
+
+<!-- Cards -->
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 data-stat="users">
+
+0
+
+</h2>
+
+<p>Total Users</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+<h2 data-stat="requests">
+
+0
+
+</h2>
+
+<p>Help Requests</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-indian-rupee-sign"></i>
+
+<h2 data-stat="donations">
+
+0
+
+</h2>
+
+<p>Total Donations</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-user-group"></i>
+
+<h2 data-stat="volunteers">
+
+0
+
+</h2>
+
+<p>Volunteers</p>
+
+</div>
+
+</div>
+
+<!-- Request Table -->
+
+<div class="table-box">
+
+<h2>
+
+Recent Help Requests
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Need</th>
+
+<th>Location</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Rahul</td>
+
+<td>Medical</td>
+
+<td>Delhi</td>
+
+<td>
+
+<span class="status pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button onclick="approve(this)">
+
+Approve
+
+</button>
+
+<button onclick="reject(this)">
+
+Reject
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Anjali</td>
+
+<td>Food</td>
+
+<td>Noida</td>
+
+<td>
+
+<span class="status completed">
+
+Approved
+
+</span>
+
+</td>
+
+<td>
+
+<button disabled>
+
+Approved
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Mohit</td>
+
+<td>Clothes</td>
+
+<td>Aligarh</td>
+
+<td>
+
+<span class="status pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button onclick="approve(this)">
+
+Approve
+
+</button>
+
+<button onclick="reject(this)">
+
+Reject
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Leaderboard -->
+
+<div class="leaderboard mt-30">
+
+<h2>
+
+Top Volunteers
+
+</h2>
+
+<div id="leaderboard">
+
+</div>
+
+</div>
+
+<!-- Notifications -->
+
+<div class="notification-box mt-30">
+
+<h2>
+
+Latest Notifications
+
+</h2>
+
+<div id="notifications">
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
+<div class="dashboard-footer">
+
+Helping Hands NGO Admin Dashboard © 2026
+
+</div>
+
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/admin.js"></script>
+<script>
+function adminLogout(){
+    localStorage.removeItem("adminLogin");
+
+    sbClient.auth.signOut();
+    alert("Admin Logged Out");
+    window.location.href = "login.html";
+}
+
+function approve(button){
+
+const row=button.closest("tr");
+
+row.querySelector(".status").innerHTML="Approved";
+
+row.querySelector(".status").className="status completed";
+
+button.innerHTML="Approved";
+
+button.disabled=true;
+
+if(button.nextElementSibling){
+
+button.nextElementSibling.remove();
+
+}
+
+}
+
+function reject(button){
+
+const row=button.closest("tr");
+
+row.querySelector(".status").innerHTML="Rejected";
+
+row.querySelector(".status").className="status rejected";
+
+button.innerHTML="Rejected";
+
+button.disabled=true;
+
+if(button.previousElementSibling){
+
+button.previousElementSibling.remove();
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!-- manage-posts.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Help Posts | Helping Hands Admin</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<style>
+
+.top-bar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+.top-bar input{
+
+width:320px;
+
+padding:12px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+}
+
+.filter{
+
+padding:12px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+}
+
+.action{
+
+padding:8px 14px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+color:#fff;
+
+margin:2px;
+
+}
+
+.view{
+
+background:#2563EB;
+
+}
+
+.approve{
+
+background:#16A34A;
+
+}
+
+.reject{
+
+background:#DC2626;
+
+}
+
+img.post{
+
+width:70px;
+
+height:70px;
+
+border-radius:10px;
+
+object-fit:cover;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+❤️ Helping Hands
+
+</div>
+
+<ul class="menu">
+
+<li><a href="admin-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+
+<li><a href="manage-users.html"><i class="fa-solid fa-users"></i> Users</a></li>
+
+<li><a href="manage-posts.html"><i class="fa-solid fa-file-lines"></i> Help Posts</a></li>
+
+<li><a href="manage-donations.html"><i class="fa-solid fa-hand-holding-dollar"></i> Donations</a></li>
+
+<li><a href="manage-volunteers.html"><i class="fa-solid fa-user-group"></i> Volunteers</a></li>
+
+<li><a href="reports.html"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+
+</ul>
+
+</div>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Main -->
+
+<div class="main">
+
+<header class="header">
+
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+
+<h2>
+
+Manage Help Requests
+
+</h2>
+
+</header>
+
+<div class="content">
+
+<div class="top-bar">
+
+<input
+type="text"
+id="searchPost"
+placeholder="Search Help Request">
+
+<select class="filter">
+
+<option>All Categories</option>
+
+<option>Food</option>
+
+<option>Medical</option>
+
+<option>Education</option>
+
+<option>Clothes</option>
+
+<option>Blood</option>
+
+<option>Shelter</option>
+
+</select>
+
+</div>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Image</th>
+
+<th>Name</th>
+
+<th>Category</th>
+
+<th>Location</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="postTable">
+<tr><td colspan="6">Loading...</td></tr>
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

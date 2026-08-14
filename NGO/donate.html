@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donate | Helping Hands</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+            NAVBAR
+    =========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                ❤️ Helping Hands
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="need-help.html">Need Help</a></li>
+                <li><a href="provide-help.html">Provide Help</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ==========================
+            HERO
+    =========================== -->
+
+    <section class="page-title">
+
+        <h1>❤️ Make a Donation</h1>
+
+        <p>
+
+            Every contribution helps someone in need.
+
+        </p>
+
+    </section>
+
+    <!-- ==========================
+            DONATION FORM
+    =========================== -->
+
+    <section class="help-form-section">
+
+        <form id="donationForm">
+
+            <h2>Donor Information</h2>
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>Full Name *</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label>Mobile *</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="email">
+
+                </div>
+
+                <div>
+
+                    <label>City</label>
+
+                    <input
+                        type="text"
+                        id="city">
+
+                </div>
+
+            </div>
+
+            <h2>Select Donation Type</h2>
+
+            <div class="form-grid">
+
+                <label><input type="radio" name="type" value="Money"> Money</label>
+
+                <label><input type="radio" name="type" value="Food"> Food</label>
+
+                <label><input type="radio" name="type" value="Clothes"> Clothes</label>
+
+                <label><input type="radio" name="type" value="Books"> Books</label>
+
+                <label><input type="radio" name="type" value="Medicines"> Medicines</label>
+
+                <label><input type="radio" name="type" value="Blood"> Blood</label>
+
+            </div>
+
+            <h2>Amount (₹)</h2>
+
+            <div class="form-grid">
+
+                <button type="button" class="amount-btn">100</button>
+                <button type="button" class="amount-btn">500</button>
+                <button type="button" class="amount-btn">1000</button>
+                <button type="button" class="amount-btn">5000</button>
+
+            </div>
+
+            <br>
+
+            <label>Custom Amount</label>
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter Amount">
+
+            <br><br>
+
+            <label>Message (Optional)</label>
+
+            <textarea
+                rows="5"
+                id="message"
+                placeholder="Write your message..."></textarea>
+
+            <br><br>
+
+            <label>
+
+                <input
+                    type="checkbox">
+
+                Show my name publicly as donor
+
+            </label>
+
+            <br><br>
+
+            <h2>Demo QR Code</h2>
+
+            <img
+                src="assets/images/qr.png"
+                alt="QR Code"
+                style="width:220px;display:block;margin:auto;">
+
+            <br>
+
+            <button
+                class="primary"
+                type="submit">
+
+                Donate Now ❤️
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- ==========================
+            RECENT DONORS
+    =========================== -->
+
+    <section class="volunteers">
+
+        <h2>
+
+            Recent Donors
+
+        </h2>
+
+        <div class="volunteer-grid">
+
+            <div class="volunteer">
+
+                <h3>Rahul Sharma</h3>
+
+                <p>₹5000</p>
+
+            </div>
+
+            <div class="volunteer">
+
+                <h3>Anjali Verma</h3>
+
+                <p>₹2000</p>
+
+            </div>
+
+            <div class="volunteer">
+
+                <h3>Amit Kumar</h3>
+
+                <p>₹1000</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+            FOOTER
+    =========================== -->
+
+    <footer>
+
+        <div>
+
+            <h2>Helping Hands</h2>
+
+            <p>
+
+                Together We Can Change Lives.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="need-help.html">Need Help</a>
+            <a href="provide-help.html">Volunteer</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>help@helpinghands.org</p>
+            <p>+91 XXXXX XXXXX</p>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+
+    <script>
+
+        const amountButtons = document.querySelectorAll(".amount-btn");
+
+        const amountInput = document.getElementById("amount");
+
+        amountButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                amountInput.value = button.innerText;
+
+            });
+
+        });
+
+        document.getElementById("donationForm")
+
+            .addEventListener("submit", async function (e) {
+
+                e.preventDefault();
+
+                const donorName = document.getElementById("name").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+
+                if(!donorName || !phone){
+                    alert("Please fill your name and mobile number.");
+                    return;
+                }
+
+                const typeChecked = document.querySelector('input[name="type"]:checked');
+
+                const btn = this.querySelector('button[type="submit"], button.primary');
+                if(btn){ btn.disabled = true; }
+
+                const { error } = await window.sbClient.from("donations").insert([{
+                    donor_name: donorName,
+                    phone: phone,
+                    email: document.getElementById("email").value.trim() || null,
+                    city: document.getElementById("city").value.trim() || null,
+                    type: typeChecked ? typeChecked.value : null,
+                    amount: amountInput.value ? Number(amountInput.value) : null,
+                    message: document.getElementById("message").value.trim() || null
+                }]);
+
+                if(btn){ btn.disabled = false; }
+
+                if(error){
+                    alert("❌ " + error.message);
+                    return;
+                }
+
+                alert("❤️ Thank you for your donation!");
+
+                this.reset();
+
+            });
+
+    </script>
+
+</body>
+
+</html>

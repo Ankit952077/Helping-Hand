@@ -1,0 +1,316 @@
+<!-- volunteer.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Volunteer | Helping Hands</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+❤️ Helping Hands
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="need-help.html">Need Help</a></li>
+<li><a href="provide-help.html">Provide Help</a></li>
+<li><a href="donate.html">Donate</a></li>
+<li><a href="volunteer.html">Volunteer</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="page-title">
+
+<h1>
+
+Become A Volunteer ❤️
+
+</h1>
+
+<p>
+
+Give your time and change someone's life.
+
+</p>
+
+</section>
+
+<section class="help-form-section">
+
+<form id="volunteerForm">
+
+<h2>Personal Details</h2>
+
+<div class="form-grid">
+
+<div>
+
+<label>Full Name *</label>
+
+<input
+type="text"
+id="name"
+required>
+
+</div>
+
+<div>
+
+<label>Phone Number *</label>
+
+<input
+type="tel"
+id="phone"
+required>
+
+</div>
+
+<div>
+
+<label>Email *</label>
+
+<input
+type="email"
+id="email"
+required>
+
+</div>
+
+<div>
+
+<label>Age *</label>
+
+<input
+type="number"
+id="age"
+required>
+
+</div>
+
+</div>
+
+<h2>Volunteer Type</h2>
+
+<div class="form-grid">
+
+<label><input type="checkbox"> Food Distribution</label>
+
+<label><input type="checkbox"> Medical Support</label>
+
+<label><input type="checkbox"> Teaching</label>
+
+<label><input type="checkbox"> Blood Donation</label>
+
+<label><input type="checkbox"> Disaster Relief</label>
+
+<label><input type="checkbox"> Animal Rescue</label>
+
+<label><input type="checkbox"> Clothes Distribution</label>
+
+<label><input type="checkbox"> Fundraising</label>
+
+</div>
+
+<h2>Availability</h2>
+
+<div class="form-grid">
+
+<div>
+
+<label>Available Days</label>
+
+<select id="days">
+
+<option>Weekdays</option>
+
+<option>Weekends</option>
+
+<option>Any Day</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Hours Per Week</label>
+
+<input
+type="number"
+id="hours">
+
+</div>
+
+</div>
+
+<label>
+
+Why do you want to become a volunteer?
+
+</label>
+
+<textarea
+id="message"
+rows="6"
+placeholder="Tell us your motivation..."></textarea>
+
+<br><br>
+
+<label>
+
+<input
+type="checkbox"
+required>
+
+I agree to work responsibly and respectfully.
+
+</label>
+
+<br><br>
+
+<button
+class="primary"
+type="submit">
+
+Join As Volunteer
+
+</button>
+
+</form>
+
+</section>
+
+<section class="volunteers">
+
+<h2>
+
+Our Top Volunteers
+
+</h2>
+
+<div class="volunteer-grid">
+
+<div class="volunteer">
+
+<h3>Rahul Sharma</h3>
+
+<p>120 Hours</p>
+
+</div>
+
+<div class="volunteer">
+
+<h3>Anjali Verma</h3>
+
+<p>98 Hours</p>
+
+</div>
+
+<div class="volunteer">
+
+<h3>Amit Kumar</h3>
+
+<p>84 Hours</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div>
+
+<h2>
+
+Helping Hands
+
+</h2>
+
+<p>
+
+Together We Can Build A Better World.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<a href="index.html">Home</a>
+<a href="donate.html">Donate</a>
+<a href="need-help.html">Need Help</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>help@helpinghands.org</p>
+
+<p>+91 XXXXX XXXXX</p>
+
+</div>
+
+</footer>
+
+<script>
+
+document.getElementById("volunteerForm")
+
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("❤️ Thank you for joining Helping Hands!");
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
